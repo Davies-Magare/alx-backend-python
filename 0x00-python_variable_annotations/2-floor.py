@@ -7,7 +7,7 @@ import math
 def floor(n: float) -> int:
     """
     Args:
-        n: A float
+        n: The frist parameter: A float
 
     Returns:
         The floor of n
