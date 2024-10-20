@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from typing import List
 
 """
 This module demonstrates annotation in python with a type
@@ -15,6 +14,8 @@ Functions:
 imports:
     List: Used to annotate the input_list parameter.
 """
+
+from typing import List
 
 
 def sum_list(input_list: List[float]) -> float:

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import math
 
 """This module demonstrates basic type annotations in Python
 with a function that converts a float to its floor integer
@@ -12,6 +11,9 @@ Functions:
     floor(n: float) -> int:
         Converts a float to its floor.
 """
+
+
+import math
 
 
 def floor(n: float) -> int:
