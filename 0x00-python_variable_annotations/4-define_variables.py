@@ -17,7 +17,5 @@ pi: float = 3.14
 i_understand_annotations: bool = True
 
 
-
 # String variable
-
 school: str = "Holberton"
