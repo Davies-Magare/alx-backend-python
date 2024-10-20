@@ -12,7 +12,7 @@ def concat(str1: str, str2: str) -> str:
     """
     Concantenates two strings
     Args:
-        str1(str) : The first string to be concatenated to the 
+        str1(str) : The first string to be concatenated to the
                        second string
         str2(str) : The second string to be concatenated to the
                         first string
@@ -35,7 +35,8 @@ def concat(str1: str, str2: str) -> str:
 
     return str1 + str2
 
-#if running this module directly, execute doctests
+
+# if running this module directly, execute doctests
 if __name__ == "__main__":
     import doctest
     doctest.testmod(verbose=True)
