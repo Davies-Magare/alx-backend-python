@@ -12,28 +12,30 @@ def concat(str1: str, str2: str) -> str:
     """
     Concantenates two strings
     Args:
-        str1(string) : The first string to be concantenated to the 
+        str1(str) : The first string to be concatenated to the 
                        second string
-        str2(string) : The second string to be concantenated to the
+        str2(str) : The second string to be concatenated to the
                         first string
 
     Returns:
-        str: The result of concantenating str1 and str2
+        str: The result of concatenating str1 and str2
     Example:
         >>> concat("Davies", " Magare")
         'Davies Magare'
         >>> concat('', '')
         ''
-        >>> concat("egg", "shell") == "{}{}".format("egg", "shell")
-        True
-        >>> concat(4, "dog")
-        Traceback (most recent call last):
-            ...
-        TypeError: unsupported operand type(s) for +: 'int' and 'str'
-        >>> concat("dog", 4)
-        Traceback (most recent call last):
-            ...
-        TypeError: can only concatenate str (not "int") to str
+
+    Raises:
+        TypeError: if either str1 or str2 is not a string
 
     """
+
+    if not isinstance(str1, str) or not isinstance(str2, str):
+        raise TypeError("Both arguments must be strings.")
+
     return str1 + str2
+
+#if running this module directly, execute doctests
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True)
