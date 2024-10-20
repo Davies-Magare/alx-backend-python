@@ -2,7 +2,7 @@
 """Basic annotations with a function that concantenates two strings"""
 
 
-def add(str1: str, str2: str) -> str:
+def concat(str1: str, str2: str) -> str:
     """
     Args:
         str1: The first parameter
