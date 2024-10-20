@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Basic annotations with a function that adds two integers"""
 
+
 def add(a: float, b: float) -> float:
     """Add two floats
     Args:
