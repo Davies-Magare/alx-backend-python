@@ -19,4 +19,4 @@ def measure_time(n, max_delay):
     end_time = time.perf_counter()
 
     elapsed_time = end_time - start_time
-    return elapsed_time
+    return elapsed_time / n
