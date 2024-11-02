@@ -9,7 +9,7 @@ import asyncio
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-def qsort(arr):
+def qsrt(arr):
     """Sort the list with qsort"""
     if len(arr) <= 1:
         return arr
@@ -21,7 +21,7 @@ def qsort(arr):
             left.append(i)
         else:
             right.append(i)
-    return qsort(left) + [pivot] + qsort(right)
+    return qsrt(left) + [pivot] + qsrt(right)
 
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
@@ -29,4 +29,4 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
 
     tasks = [asyncio.create_task(wait_random(max_delay)) for i in range(n)]
     results = await asyncio.gather(*tasks)
-    return qsort(results)
+    return qsrt(results)
