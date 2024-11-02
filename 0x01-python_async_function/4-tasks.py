@@ -2,7 +2,7 @@
 
 """
 This module demonstrates how to run multiple
-coroutines at the same time with async using 
+coroutines at the same time with async using
 task_wait_random, a helper function from a previous
 task
 """
