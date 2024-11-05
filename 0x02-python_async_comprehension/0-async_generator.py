@@ -10,7 +10,7 @@ import random
 from typing import Generator
 
 
-async def async_generator() -> typing.Generator[float, None, None]:
+async def async_generator() -> Generator[float, None, None]:
     """Generate a random number between 0 to 10"""
 
     for i in range(0, 10):
