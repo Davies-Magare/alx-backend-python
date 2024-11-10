@@ -60,12 +60,14 @@ class TestMemoize(unittest.TestCase):
     def test_memoize(self):
         """Test memoize"""
         class TestClass:
-
+            """Test memoize"""
             def a_method(self):
+                """Return a value"""
                 return 42
 
             @memoize
             def a_property(self):
+                """Call a_method as a property"""
                 return self.a_method()
         instance = TestClass()
         instance.a_method = Mock()
