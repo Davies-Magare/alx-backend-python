@@ -9,9 +9,7 @@ import unittest
 from parameterized import parameterized
 from unittest.mock import patch, Mock
 from typing import Dict
-access_nested_map = __import__('utils').access_nested_map
-get_json = __import__('utils').get_json
-memoize = __import__('utils').memoize
+
 GitClient = __import__('client').GithubOrgClient
 
 
