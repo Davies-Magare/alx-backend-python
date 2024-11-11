@@ -23,7 +23,7 @@ class TestGithubOrgClient(unittest.TestCase):
         ('abc', {"git": "myorg"})
     ])
     @patch('client.get_json')
-    def test_org(self, org: str, result, mock_request):
+    def test_org(self, org: str, result: Dict, mock_request: Mock) -> None:
         """Test the org method"""
 
         ORG_URL = "https://api.github.com/orgs/{}"
