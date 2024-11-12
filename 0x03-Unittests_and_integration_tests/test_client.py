@@ -42,6 +42,18 @@ class TestGithubOrgClient(unittest.TestCase):
                 instance._public_repos_url,
                 "https://api.github.com/repos")
 
+    @patch('client.get_json')
+    def test_public_repos(self, mock_request):
+        """Test public_repos method"""
+        with patch('client.GithubOrgClient._public_repos_url')as mock_url:
+            mock_request.return_value = [
+                {"name": "dart"}, {"name": "cpp-netlib"}]
+            mock_url.return_value = "https://api.github.com/orgs/google/repos"
+            instance = GitClient("google")
+            self.assertEqual(instance.public_repos(), ["dart", "cpp-netlib"])
+            mock_request.assert_called_once()
+            # mock_url.assert_called_once()
+
 
 if __name__ == '__main__':
     unittest.main()
