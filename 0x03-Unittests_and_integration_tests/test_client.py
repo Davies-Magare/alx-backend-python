@@ -55,6 +55,14 @@ class TestGithubOrgClient(unittest.TestCase):
             mock_request.assert_called_once()
             mock_url.assert_called_once()
 
+    @parameterized.expand([
+        ({"license": {"key": "my_license"}}, "my_license", True),
+        ({"license": {"key": "other_license"}}, "my_license", False)
+    ])
+    def test_has_license(self, mapping, key, result):
+        """Test if the given license key matches the one inside the mapping"""
+        self.assertEqual(GitClient.has_license(mapping, key), result)
+
 
 if __name__ == '__main__':
     unittest.main()
